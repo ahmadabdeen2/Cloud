@@ -1,0 +1,177 @@
+
+<div class='container'> 
+  <div class='main'> 
+<h1>Kardesler Attendance System</h1>
+<h2>Lets take your Attendance</h2>
+</div>
+
+<div class='form'>
+<form id="upload-form" action="/upload" method="POST" enctype="multipart/form-data">
+
+  <div class="upload-container">
+    <input id="file-picker" type="file" name="image" accept='image/*' capture='camera' value='Open Camera'></div>
+  <input type="hidden" name="formInstance" value="form1" />
+  <div><input type="submit" value="Check Attendance"></div>
+</form> 
+</div>
+
+
+
+
+<div class='form'> 
+<h1> Group Chat </h1>
+<form id="upload-form-queue" action="/upload2" method="POST" enctype="multipart/form-data">
+  <div class="upload-container-queue">
+    <input id="text"  class='inputz' type="text" name="name"></div>
+    <input id="text" type="text" class='inputz' name="messagetxt"></div>
+    
+  <div><input type="submit" class='checkq' value="Send Messages"></div>
+</form> 
+
+
+
+</div>
+
+
+<div class='images-container'>
+<h2>Users</h2>
+<div class='images'>
+{{#each this.thumbnails}}
+  <img src="https://{{../accountName}}.blob.core.windows.net/{{../containerName}}/{{name}}">
+{{/each}}
+
+</div>
+
+
+</div>
+</div>
+
+<style>
+body{
+  background-color: #082032;
+  color: #D5D5D5;
+  
+}
+.container{
+  overflow: hidden;
+  margin: 0 auto;
+  width: 70%;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+}
+.main h1{
+        text-align: center;
+        padding: 10px;
+        margin: 50px 50px 20px 50px;
+        font: 35px Arial;
+        overflow: hidden;
+}
+.form{
+  margin: 0 auto;
+  width: 25%;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+}
+.inputz{
+  margin: 10px;
+  padding: 10px;
+  width: 85%;
+  border: 1px solid #000;
+  border-radius: 5px;
+  overflow: hidden;
+}
+.inputz2{
+  margin: 10px;
+  padding: 10px;
+  width: 85%;
+  border: 1px solid #000;
+  border-radius: 5px;
+  overflow: hidden;
+}
+.inputz1{
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  width: 80%;
+  border: 1px solid #000;
+  border-radius: 5px;
+  background-color: #D5D5D5;
+  overflow: hidden;
+}
+.check{
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  width: 80%;
+  border: 1px solid #000;
+  border-radius: 5px;
+  background-color: #D5D5D5;
+  overflow: hidden;
+}
+.check{
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  width: 50%;
+  border: 1px solid #000;
+  border-radius: 5px;
+  background-color: #D5D5D5;
+  overflow: hidden;
+}
+.images-container{
+  max-height: 200px;
+  margin: 0 auto;
+  width: 70%;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+
+
+}
+img{
+  min-height: 200px;
+  max-height: 200px;
+  min-width: 120px;
+  margin:0;
+  border: 5px solid #D5D5D5;
+  max-width: 120px;
+  overflow: hidden;
+}
+</style>
+
+
+
+<script>
+  
+  document.addEventListener('DOMContentLoaded', () => {
+
+    const message = document.getElementById('message');
+    const picker = document.getElementById('file-picker');
+
+    document.getElementById('upload-form').addEventListener('submit', (e) => {
+
+      message.innerText = '';
+
+      if(!picker.files.length) {
+        message.innerText = 'Please select an image to upload.';
+        e.preventDefault();
+        return false;
+      }
+    });
+
+  });
+
+
+
+</script>

@@ -1,0 +1,31 @@
+{
+  "name": "node-blobs-image-resize",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www"
+  },
+  "dependencies": {
+    "@azure/cognitiveservices-face": "^5.0.0",
+    "@azure/ms-rest-js": "^2.6.0",
+    "@azure/storage-queue": "^12.7.0",
+    "azure-storage": "^2.10.7",
+    "body-parser": "~1.18.2",
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.6.9",
+    "dotenv": "^5.0.1",
+    "ejs": "^3.1.6",
+    "express": "~4.15.5",
+    "express-fileupload": "^1.2.1",
+    "formidable": "^2.0.1",
+    "hbs": "~4.0.1",
+    "http": "^0.0.1-security",
+    "into-stream": "^3.1.0",
+    "mongoose": "^6.1.8",
+    "morgan": "~1.9.0",
+    "multer": "^1.3.0",
+    "serve-favicon": "~2.4.5",
+    "uuidv1": "^1.6.14",
+    "uuidv4": "^6.2.12"
+  }
+}
