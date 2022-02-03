@@ -22,23 +22,17 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', index);
 app.use('/upload', upload);
 app.use('/upload2', upload2);
-const port = process.env.PORT || 1337 || 8080;
 // app.use('/group', group);
-// catch 404 and forward to error handler
+// catch 404 and forward to error handlery
 app.use((req, res, next) => {
     const err = new Error('Not Found');
     err.status = 404;
     next(err);
 });
 
-// 8080 or 1337
 
 
 
-
-app.listen(port, () => {
-    console.log(`Example app listening at http://localhost:${port}`)
-})
 
 // error handler
 app.use((err, req, res, next) => {
