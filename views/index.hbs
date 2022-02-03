@@ -34,7 +34,7 @@
 
 
 <div class='images-container'>
-<h2>Users</h2>
+<h2 style="font-size: 50px;">Users</h2>
 <div class='images'>
 {{#each this.thumbnails}}
   <img src="https://{{../accountName}}.blob.core.windows.net/{{../containerName}}/{{name}}">
@@ -55,7 +55,7 @@ body{
 .container{
   overflow: hidden;
   margin: 0 auto;
-  width: 70%;
+  min-width: 100%;
   align-items: center;
   justify-content: center;
   text-align: center;
@@ -65,12 +65,19 @@ body{
         text-align: center;
         padding: 10px;
         margin: 50px 50px 20px 50px;
-        font: 35px Arial;
+        font: 55px 'Oswald', sans-serif;
+        overflow: hidden;
+}
+.main h2{
+        text-align: center;
+        padding: 10px;
+        margin: 20px 20px;
+        font: 35px 'Oswald', sans-serif;
         overflow: hidden;
 }
 .form{
   margin: 0 auto;
-  width: 25%;
+  width:25%;
   align-items: center;
   justify-content: center;
   text-align: center;
@@ -130,22 +137,23 @@ body{
 }
 .images-container{
   max-height: 200px;
-  margin: 0 auto;
-  width: 70%;
+  margin: 90px auto;
+  max-width: 60%;
+  min-height: 60%;
   align-items: center;
   justify-content: center;
   text-align: center;
-
+  
 
 
 }
 img{
-  min-height: 200px;
-  max-height: 200px;
-  min-width: 120px;
+  min-height: 300px;
+  max-height: 300px;
+  min-width: 170px;
   margin:0;
   border: 5px solid #D5D5D5;
-  max-width: 120px;
+  max-width: 170px;
   overflow: hidden;
 }
 </style>
